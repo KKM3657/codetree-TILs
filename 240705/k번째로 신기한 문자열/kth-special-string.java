@@ -23,6 +23,9 @@ public class Main {
             }
         }
         Collections.sort(list);
-        System.out.println(list.get(idx-1));
+        if(!list.isEmpty())
+            System.out.println(list.get(idx-1));
+        else
+            System.out.println(list.get(idx));
     }
 }
