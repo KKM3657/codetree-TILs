@@ -16,8 +16,9 @@ public class Main {
         ArrayList<String> list = new ArrayList<>();
         for(int i=0; i<N; i++) {
             String word = br.readLine();
+            if(start.length() > word.length())
+                continue;
             String temp = word.substring(0,start.length());
-
             if(temp.equals(start)){
                 list.add(word);
             }
