@@ -27,12 +27,15 @@ public class Main {
             list.add(new Node(Integer.parseInt(st.nextToken()), i));
         }
 
-        Collections.sort(list, new Comparator<Node>() {
-            @Override
-            public int compare(Node a, Node b) {
-                return a.value - b.value;
-            }
-        });
+        // Collections.sort(list, new Comparator<Node>() {
+        //     @Override
+        //     public int compare(Node a, Node b) {
+        //         return a.value - b.value;
+        //     }
+        // });
+
+        Collections.sort(list, Comparator.comparing(node -> node.value));
+
         int[] answer = new int[N];
         for(int i=0; i<N; i++) {
             // 원래 자리
