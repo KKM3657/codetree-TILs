@@ -24,6 +24,8 @@ public class Main {
                 for(int j=1; j<=value; j++) {
                     if(area[idx] == black)
                         bc--;
+                    else if(area[idx] == white)
+                        wc--;
                     area[idx] = 1;
                     wc++;
                     if(j != value)
@@ -34,6 +36,8 @@ public class Main {
                 for(int j=1; j<=value; j++) {
                     if(area[idx] == white)
                         wc--;
+                    else if(area[idx] == black)
+                        bc--;
                     area[idx] = 2;
                     bc++;
                     if(j != value)
